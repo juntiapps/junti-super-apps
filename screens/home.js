@@ -11,7 +11,7 @@ import {
 import { DATA } from "../data";
 
 export default function HomeScreen({ navigation }) {
-  console.log(navigation);
+  //console.log(navigation);
   return (
     <View style={styles.container}>
       <Text style={styles.hello}>HELLO</Text>

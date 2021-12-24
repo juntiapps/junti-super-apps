@@ -6,6 +6,7 @@ import {
   Linking,
   StyleSheet,
 } from "react-native";
+import {WANum} from '../../../bimil'//your WhatsApp Number
 
 export default function result({ navigation, route }) {
   const uri = route.params.url;
@@ -34,7 +35,7 @@ export default function result({ navigation, route }) {
             Linking.openURL(
               `whatsapp://send?text=${encodeURIComponent(
                 uri
-              )}&phone=+6285156283512`
+              )}&phone=${WANum}`
             );
           }}
         >

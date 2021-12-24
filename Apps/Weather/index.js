@@ -15,6 +15,8 @@ import {
   MaterialCommunityIcons,
   Entypo,
 } from "@expo/vector-icons";
+import {OpenWeaterMapToken} from '../../bimil'
+//console.log(OpenWeaterMapToken)
 
 export default function App() {
   const [data, setData] = React.useState([]);
@@ -31,7 +33,11 @@ export default function App() {
       let location = await Location.getCurrentPositionAsync({});
       //console.log(location.coords);
       fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${location.coords.latitude}&lon=${location.coords.longitude}&appid=8bcbccb6fa755f0e545cf16b1dc8834a&units=metric`,
+        'https://api.openweathermap.org/data/2.5/forecast?'
+        +'lat='+location.coords.latitude
+        +'&lon='+location.coords.longitude
+        +'&appid='+OpenWeaterMapToken//you can get it from openweathermap website
+        +'&units=metric',
         {
           method: "GET",
         }
