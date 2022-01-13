@@ -8,7 +8,7 @@ export const DATA = [
   {
     id: 2,
     icon: require("../assets/icon-cash-flow.png"),
-    text: "CashFlow",
+    text: "Cash Flow",
     app: "CF",
   },
   {
@@ -22,5 +22,29 @@ export const DATA = [
     icon: require("../assets/icon-weather.png"),
     text: "Weather",
     app: "We",
+  },
+  {
+    id: 5,
+    icon: require("../assets/icon-ua.png"),
+    text: "User Auth",
+    app: "UA",
+  },
+  {
+    id: 6,
+    icon: require("../assets/icon-sy.png"),
+    text: "Sholat Yuk",
+    app: "SY",
+  },
+  {
+    id: 7,
+    icon: require("../assets/icon-da.png"),
+    text: "Daily Advice",
+    app: "DA",
+  },
+  {
+    id: 8,
+    icon: require("../assets/icon-ay.png"),
+    text: "Arisan Yuk",
+    app: "AY",
   },
 ];

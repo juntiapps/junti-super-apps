@@ -17,7 +17,9 @@ export default function HomeScreen({ navigation }) {
       <Text style={styles.hello}>HELLO</Text>
       <Text style={styles.welcome}>
         Welcome To{" "}
-        <Text style={{ fontWeight: "bold",color:"#CB4545" }}>Junti<Text style={{color: 'black'}}>Apps</Text></Text>
+        <Text style={{ fontWeight: "bold", color: "#CB4545" }}>
+          Junti<Text style={{ color: "black" }}>Apps</Text>
+        </Text>
       </Text>
       <View style={styles.listContainer}>
         <FlatList

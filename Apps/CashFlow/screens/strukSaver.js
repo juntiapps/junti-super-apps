@@ -14,12 +14,14 @@ export default function strukSaver({ navigation }) {
     (async () => {
       const cameraStatus = await Camera.requestCameraPermissionsAsync();
       setHasPermission(cameraStatus.status === "granted");
+      //console.log('cam',cameraStatus);
       const mediaLib = await MediaLibrary.requestPermissionsAsync();
       setHasPermission2(mediaLib.status === "granted");
+      //console.log('med',mediaLib);
     })();
   }, []);
 
-  const takePicture = async() => {
+  const takePicture = async () => {
     if (camera) {
       const data = await camera.takePictureAsync(null);
       //console.log(data.uri)
@@ -27,11 +29,11 @@ export default function strukSaver({ navigation }) {
     }
   };
 
-  const savePicture = async() => {
-    const asset = await MediaLibrary.createAssetAsync(image)
+  const savePicture = async () => {
+    const asset = await MediaLibrary.createAssetAsync(image);
     //console.log(asset)
-    navigation.navigate('add', {uri:asset.uri})
-  }
+    navigation.navigate("add", { uri: asset.uri });
+  };
 
   if (hasPermission === null) {
     return <Text>Requesting for camera permission</Text>;

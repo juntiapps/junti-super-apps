@@ -6,6 +6,10 @@ import KVS from "../Apps/KartuVaksinScanner/";
 import CF from "../Apps/CashFlow/";
 import TL from "../Apps/Translator";
 import We from "../Apps/Weather";
+import UA from "../Apps/UserAuth";
+import SY from "../Apps/SholatYuk";
+import DA from "../Apps/DailyAdvice";
+import AY from "../Apps/ArisanYuk";
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +32,8 @@ export default function RootNavigator() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="KVS" component={KVS} />
         <Stack.Screen name="CF" component={CF} />
+        <Stack.Screen name="UA" component={UA} />
+
         <Stack.Screen
           name="TL"
           component={TL}
@@ -42,6 +48,30 @@ export default function RootNavigator() {
           options={{
             headerShown: true,
             title: "Weather",
+          }}
+        />
+        <Stack.Screen
+          name="SY"
+          component={SY}
+          options={{
+            headerShown: true,
+            title: "SholatYuk",
+          }}
+        />
+        <Stack.Screen
+          name="DA"
+          component={DA}
+          options={{
+            headerShown: true,
+            title: "DailyAdvice",
+          }}
+        />
+        <Stack.Screen
+          name="AY"
+          component={AY}
+          options={{
+            headerShown: true,
+            title: "ArisanYuk",
           }}
         />
       </Stack.Navigator>

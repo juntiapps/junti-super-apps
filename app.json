@@ -2,7 +2,7 @@
   "expo": {
     "name": "JuntiApps",
     "slug": "JuntiApps",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -20,8 +20,8 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.juntiapp.v2",
-      "versionCode": 2
+      "package": "com.juntiapp.v3",
+      "versionCode": 3
     },
     "description": "All in one Apps",
     "githubUrl": "https://github.com/juntiapps"

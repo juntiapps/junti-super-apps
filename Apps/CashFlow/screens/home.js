@@ -105,7 +105,7 @@ export default function home({ navigation }) {
     if (recap >= 0) {
       result = `Keuntungan: ${display(recap)}`;
     } else {
-      result = `Kerugian: ${display(recap*-1)}`;
+      result = `Kerugian: ${display(recap * -1)}`;
     }
     return result;
   };
@@ -120,12 +120,6 @@ export default function home({ navigation }) {
       strukURL,
     });
   };
-
-  // const display = (x) => {
-  //   if(x) return "Rp "+x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    
-  // };
-  //console.log(display(data2[0].nominal))
 
   return (
     <View style={styles.container}>
