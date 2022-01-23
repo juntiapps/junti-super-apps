@@ -5,7 +5,7 @@ import {
   StyleSheet,
   FlatList,
   Image,
-  TextInput,
+  ActivityIndicator
 } from "react-native";
 import * as Location from "expo-location";
 import moment from "moment";
@@ -15,7 +15,7 @@ import {
   MaterialCommunityIcons,
   Entypo,
 } from "@expo/vector-icons";
-import {OpenWeaterMapToken} from '../../bimil'
+import { OpenWeaterMapToken } from "../../bimil";
 //console.log(OpenWeaterMapToken)
 
 export default function App() {
@@ -33,11 +33,14 @@ export default function App() {
       let location = await Location.getCurrentPositionAsync({});
       //console.log(location.coords);
       fetch(
-        'https://api.openweathermap.org/data/2.5/forecast?'
-        +'lat='+location.coords.latitude
-        +'&lon='+location.coords.longitude
-        +'&appid='+OpenWeaterMapToken//you can get it from openweathermap website
-        +'&units=metric',
+        "https://api.openweathermap.org/data/2.5/forecast?" +
+          "lat=" +
+          location.coords.latitude +
+          "&lon=" +
+          location.coords.longitude +
+          "&appid=" +
+          OpenWeaterMapToken + //you can get it from openweathermap website
+          "&units=metric",
         {
           method: "GET",
         }
@@ -54,7 +57,12 @@ export default function App() {
   //console.log("data", data);
 
   if (data.length === 0) {
-    return <View />;
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <ActivityIndicator size="large" color="#CB4545" />
+        <Text>Loading</Text>
+      </View>
+    );
   }
 
   return (
@@ -196,7 +204,7 @@ export default function App() {
               { borderLeftWidth: 0.5, borderleftColor: "grey" },
             ]}
           >
-             <Text style={{ color: "grey" }}>Feels like</Text>
+            <Text style={{ color: "grey" }}>Feels like</Text>
             <View style={[styles.row, { justifyContent: "space-between" }]}>
               <Text style={styles.text}>
                 {data.list[0].main.feels_like}
