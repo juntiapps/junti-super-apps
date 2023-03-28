@@ -1,7 +1,7 @@
 # junti-super-apps
 All apps that I build joined in one Apps
 ## Download Link 
-https://drive.google.com/file/d/1gXqqwOAGzuAsNDYSrF23cycqZRlYOh6W/view?usp=sharing
+https://play.google.com/store/apps/details?id=com.juntiapp.v3&hl=en
 ## List of Apps
 ### QR Scanner 
 v.1
@@ -26,9 +26,6 @@ v.2
 - Show current weather and its forecast 5 days ahead, 3 hours inverval.
 - Data based on current location (using gps) and openweathermap for weather data.
 - Next Update: Adds other location based on the places, like state, city, regency, district, village, etc.
-
-### UserAuth
-- sample and simple user aunthentication (register,login) with php mysql as backend
 
 ### SholatYuk
 - show Moslem prayer times based on selected location
